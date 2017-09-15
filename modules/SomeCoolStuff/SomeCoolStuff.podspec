@@ -37,4 +37,14 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+
+  s.test_spec 'Tests' do |t|
+    t.source_files = 'Example/Tests/*.swift'
+    # I think there is a bug in cocoapods
+    # These subspec dependencies will impact the user of this test_spec
+    # and literally remove them from your parent project for all targets.
+    t.dependency 'Nimble', '7.0.1'
+    t.dependency 'Quick', '1.1.0'
+  end
+
 end
