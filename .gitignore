@@ -1,0 +1,5 @@
+# OSX Noise
+.DS_Store
+
+# CocoaPods noise
+Pods/
