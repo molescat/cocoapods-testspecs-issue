@@ -24,7 +24,7 @@ TODO: Add long description of the pod here.
   s.homepage         = 'https://github.com/Myles Abbott/SomeCoolStuff'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Myles Abbott' => 'myles.abbott@rea-group.com' }
-  s.source           = { :git => 'https://github.com/Myles Abbott/SomeCoolStuff.git', :tag => s.version.to_s }
+  s.source           = { :path => '.'}
 
   s.ios.deployment_target = '8.0'
 
