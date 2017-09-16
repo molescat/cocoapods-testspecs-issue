@@ -2,24 +2,20 @@
 # Be sure to run `pod lib lint SomeCoolStuff.podspec' to ensure this is a
 # valid spec before submitting.
 #
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
 
 Pod::Spec.new do |s|
   s.name             = 'SomeCoolStuff'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of SomeCoolStuff.'
-  s.description      = 'Add long description of the pod here.'
+  s.summary          = 'CocoaPods testspecs issue - test rig SomeCoolStuff.'
+  s.description      = 'Test rig to examine the test_spec dependency issue for users of a framework that specifies dependencies, when the pod is used locally.'
 
-  s.homepage         = 'https://github.com/Myles Abbott/SomeCoolStuff'
+  s.homepage         = 'https://github.com/molescat'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Myles Abbott' => 'myles.abbott@rea-group.com' }
   s.source           = { :path => '.'}
+  s.source_files = 'SomeCoolStuff/Classes/**/*'
 
   s.ios.deployment_target = '8.0'
-
-  s.source_files = 'SomeCoolStuff/Classes/**/*'
 
   s.test_spec 'Tests' do |t|
     t.source_files = 'Example/Tests/*.swift'
