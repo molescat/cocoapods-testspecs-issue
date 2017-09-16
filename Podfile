@@ -3,7 +3,13 @@ platform :ios, '10.0'
 target 'MyApp' do
   use_frameworks!
 
-  # Pods for MyApp
+  # By adding testspecs here, this will mess things up,
+  # such that MyApp's Unit Tests can no longer find Quick/Nimble
+  pod 'SomeCoolStuff', :path => './modules/SomeCoolStuff', :testspecs => ['Tests']
+
+  # Change it to this and it will work
+  # pod 'SomeCoolStuff', :path => './modules/SomeCoolStuff'
+
 
   target 'MyAppTests' do
     inherit! :search_paths
